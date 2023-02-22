@@ -1,7 +1,7 @@
 use yew::prelude::*;
 
 #[derive(Clone, Debug, PartialEq, Eq, Properties)]
-pub struct Props {
+pub struct AsciidocProperties {
     /// The Asciidoc content.
     #[prop_or_default]
     pub content: Option<String>,
@@ -24,8 +24,12 @@ pub struct Props {
 /// A component showing the provided Asciidoc content, rendered to HTML.
 ///
 /// You will still need to provide a stylesheet with the styles used by Asciidoctor.
+///
+/// ## Properties
+///
+/// Defined by [`AsciidocProperties`].
 #[function_component(Asciidoc)]
-pub fn asciidoc(props: &Props) -> Html {
+pub fn asciidoc(props: &AsciidocProperties) -> Html {
     html!(
         <div id={&props.id} class={props.class.clone()}>
             {Html::from_html_unchecked(

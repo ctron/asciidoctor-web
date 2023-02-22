@@ -2,6 +2,7 @@
 
 use wasm_bindgen::JsValue;
 
+pub mod prelude;
 pub mod sys;
 
 #[cfg(feature = "yew")]
